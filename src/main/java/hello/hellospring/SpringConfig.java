@@ -20,6 +20,15 @@ public class SpringConfig {
     public MemberService memberService() {
         return new MemberService(memberRepository);
     }
+}
+
+ /*   @Bean
+    public TimeTraceAop timeTraceAop() {
+        return new TimeTraceAop();
+    }*/
+
+    // 이거 하는 대신 @Component 를 TimeTraceAop에 주입하였다. 동일하게 사용가능.
+
 
    // @Bean
     //public MemberRepository memberRepository() {
@@ -27,6 +36,4 @@ public class SpringConfig {
        // return new JdbcMemberRepository(dataSource);
        //  return new JdbcTemplateMemberRepository(dataSource);
        // return new JpaMemberRepository(em);
-
    // }
-}
